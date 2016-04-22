@@ -7,8 +7,8 @@ import com.pholser.junit.quickcheck.scratchpad.model.tree.visitor.TreeStructureV
 import org.junit.runner.RunWith;
 
 @RunWith(JUnitQuickcheck.class)
-public class Trees {
-    @Property public void x(@From(TreeMaker.class) Tree t) {
+public class TreePropertyTest {
+    @Property public void x(@From(TreeMaker.class) @Depth(min = 10, max = 10) Tree t) {
         TreeStructureVisitor visitor = new TreeStructureVisitor();
         t.accept(visitor);
 
