@@ -1,5 +1,7 @@
 package com.pholser.junit.quickcheck.scratchpad.model.tree;
 
+import com.pholser.junit.quickcheck.scratchpad.model.tree.visitor.TreeStructureVisitor;
+
 public class Leaf implements Tree {
     private final String value;
 
@@ -13,5 +15,11 @@ public class Leaf implements Tree {
 
     public String value() {
         return value;
+    }
+
+    @Override public String toString() {
+        TreeStructureVisitor v = new TreeStructureVisitor();
+        accept(v);
+        return v.toString();
     }
 }

@@ -11,7 +11,7 @@ public class TreeDepthVisitor implements TreeVisitor {
     }
 
     @Override public Integer visit(Leaf leaf) {
-        return 1;
+        return 0;
     }
 
     @Override public Integer visit(Node node) {

@@ -13,7 +13,7 @@ public class TreeDeepestLeafVisitor implements TreeVisitor {
     }
 
     @Override public AbstractMap.SimpleImmutableEntry<String, Integer> visit(Leaf leaf) {
-        return new AbstractMap.SimpleImmutableEntry<>(leaf.value(), 1);
+        return new AbstractMap.SimpleImmutableEntry<>(leaf.value(), 0);
     }
 
     @Override
