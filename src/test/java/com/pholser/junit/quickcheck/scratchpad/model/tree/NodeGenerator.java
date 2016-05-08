@@ -10,7 +10,7 @@ public class NodeGenerator extends Generator<Node> {
     }
 
     @Override public Node generate(SourceOfRandomness random, GenerationStatus status) {
-        int depth = status.getValue(TreeKeys.DEPTH);
+        int depth = status.valueOf(TreeKeys.DEPTH).orElse(1);
 
         if (depth == 1) {
             Generator<Tree> leafOrEmpty = gen().oneOf(Leaf.class, Empty.class);
