@@ -16,9 +16,9 @@ public class RegExpirationJobData {
     public RegExpirationJobData(List<Map<String, Object>> oneDayInvites) {
         this.oneDayInvites = oneDayInvites;
         mmis = new ArrayList<>(
-                oneDayInvites.stream()
-                        .map(i -> (BigDecimal) i.get("EMPI"))
-                        .collect(toList()));
+            oneDayInvites.stream()
+                .map(i -> (BigDecimal) i.get("EMPI"))
+                .collect(toList()));
     }
 
     public List<Map<String, Object>> getOneDayInvites() {
