@@ -4,7 +4,7 @@ import java.util.Objects;
 import java.util.Optional;
 import java.util.function.Function;
 
-public final class Either<L, R> {
+final class Either<L, R> {
     private final Optional<L> left;
     private final Optional<R> right;
 
@@ -13,15 +13,15 @@ public final class Either<L, R> {
         this.right = right;
     }
 
-    public static <A, B> Either<A, B> makeLeft(A left) {
+    static <A, B> Either<A, B> makeLeft(A left) {
         return new Either<>(Optional.of(left), Optional.empty());
     }
 
-    public static <A, B> Either<A, B> makeRight(B right) {
+    static <A, B> Either<A, B> makeRight(B right) {
         return new Either<>(Optional.empty(), Optional.of(right));
     }
 
-    public <T> T map(
+    <T> T map(
         Function<? super L, ? extends T> ifLeft,
         Function<? super R, ? extends T> ifRight) {
 
