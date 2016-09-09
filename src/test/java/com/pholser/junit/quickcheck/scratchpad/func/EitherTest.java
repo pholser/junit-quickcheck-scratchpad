@@ -9,7 +9,7 @@ import static org.hamcrest.Matchers.*;
 import static org.junit.Assert.*;
 
 @RunWith(JUnitQuickcheck.class)
-public class Eithers {
+public class EitherTest {
     @Property public void x(
         Either<
             @InRange(minInt = 0) Integer,

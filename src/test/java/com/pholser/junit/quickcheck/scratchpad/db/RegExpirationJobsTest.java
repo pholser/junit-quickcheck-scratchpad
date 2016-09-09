@@ -4,11 +4,9 @@ import com.pholser.junit.quickcheck.Property;
 import com.pholser.junit.quickcheck.runner.JUnitQuickcheck;
 import org.junit.runner.RunWith;
 
-import static org.junit.Assert.*;
-
 @RunWith(JUnitQuickcheck.class)
-public class RegExpirationJobs {
+public class RegExpirationJobsTest {
     @Property public void aProp(RegExpirationJobData data) {
-        assertTrue(true);
+        System.out.println(data);
     }
 }

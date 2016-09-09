@@ -31,6 +31,9 @@ public class RegExpirationJobData {
 
     @Override
     public String toString() {
-        return MoreObjects.toStringHelper(getClass()).toString();
+        return MoreObjects.toStringHelper(getClass())
+            .add("oneDayInvites", oneDayInvites)
+            .add("mmis", mmis)
+            .toString();
     }
 }

@@ -8,7 +8,7 @@ import static org.hamcrest.Matchers.*;
 import static org.junit.Assert.*;
 
 @RunWith(JUnitQuickcheck.class)
-public class IntProperties {
+public class IntPropertiesTest {
     @Property public void positivity(@Positive int i) {
         assertThat(i, greaterThan(0));
     }
