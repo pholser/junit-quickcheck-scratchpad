@@ -1,6 +1,7 @@
+com.pholser.junit.quickcheck.scratchpad.db.RegExpirationJobDataGenerator
+com.pholser.junit.quickcheck.scratchpad.func.EitherGenerator
+com.pholser.junit.quickcheck.scratchpad.java.lang.MakeInts
 com.pholser.junit.quickcheck.scratchpad.model.tree.NodeGenerator
 com.pholser.junit.quickcheck.scratchpad.model.tree.LeafGenerator
 com.pholser.junit.quickcheck.scratchpad.model.tree.EmptyGenerator
-com.pholser.junit.quickcheck.scratchpad.func.EitherGenerator
-com.pholser.junit.quickcheck.scratchpad.java.lang.MakeInts
-com.pholser.junit.quickcheck.scratchpad.db.RegExpirationJobDataGenerator
+com.pholser.junit.quickcheck.scratchpad.regex.Structured
