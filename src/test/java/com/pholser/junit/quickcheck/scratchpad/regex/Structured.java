@@ -23,8 +23,10 @@ public class Structured extends Generator<String> {
         SourceOfRandomness random,
         GenerationStatus status) {
 
-        Generex regex = new Generex(matching != null ? matching.value() : ".*");
-        return regex.random();
+        Generex regex = new Generex(
+                matching != null ? matching.value() : ".*",
+                random.toJDKRandom());
+        return regex.random(0, status.size());
     }
 
     public void configure(Matching matching) {
