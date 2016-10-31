@@ -8,7 +8,7 @@ import org.junit.runner.RunWith;
 @RunWith(JUnitQuickcheck.class)
 public class SSNTest {
     @Property public void wellFormedSSN(
-            @Matching("\\d{3}-\\d{2}-\\d{4}") String ssn) {
+        @Matching("\\d{3}-\\d{2}-\\d{4}") String ssn) {
 
         System.out.println(ssn);
     }
