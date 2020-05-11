@@ -21,9 +21,9 @@ final class Either<L, R> {
         return new Either<>(Optional.empty(), Optional.of(right));
     }
 
-    <T> T map(
-        Function<? super L, ? extends T> ifLeft,
-        Function<? super R, ? extends T> ifRight) {
+    <T, E extends T> T map(
+        Function<? super L, E> ifLeft,
+        Function<? super R, E> ifRight) {
 
         return left.map(ifLeft).orElseGet(() -> right.map(ifRight).get());
     }
